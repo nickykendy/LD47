@@ -82,6 +82,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Button2" type="Button" parent="."]
+margin_left = 368.0
+margin_top = 189.769
+margin_right = 472.0
+margin_bottom = 213.769
+text = "X 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Controller" parent="." instance=ExtResource( 5 )]
 
 [node name="Robot" parent="." instance=ExtResource( 2 )]
@@ -92,3 +102,4 @@ autoplay = true
 [connection signal="body_entered" from="EndPos" to="." method="_on_EndPos_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]

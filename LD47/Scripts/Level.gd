@@ -8,9 +8,12 @@ export (PackedScene) var nextScene = null
 
 var robots
 var isPlaying = false
+var timeScale : int
 
 
 func _ready():
+	timeScale = 1
+	
 	panel.plotNum = maxPlot
 	if panel.has_method("init"):
 		panel.init()
@@ -50,3 +53,18 @@ func _on_Button_pressed():
 		$Button.text = "RESET"
 	elif isPlaying:
 		get_tree().reload_current_scene()
+
+
+func _on_Button2_pressed():
+	if timeScale == 1:
+		$Button2.text = "X 2"
+		Engine.time_scale = 2
+		timeScale = 2
+	elif timeScale == 2:
+		$Button2.text = "X 4"
+		Engine.time_scale = 4
+		timeScale = 4
+	else:
+		$Button2.text = "X 1"
+		Engine.time_scale = 1
+		timeScale = 1

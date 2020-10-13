@@ -6,6 +6,7 @@ var switch : bool = false
 var count = 0
 var mods = []
 var panels
+var playSpd : int = 1
 
 var maxCount : int
 
@@ -25,6 +26,7 @@ func init():
 		mods.append(-1)
 	
 	panels = get_tree().get_nodes_in_group("Panel")
+
 
 func _physics_process(delta):
 	if switch:
