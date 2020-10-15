@@ -31,6 +31,11 @@ func _on_EndPos_body_entered(body):
 
 
 func emit_part():
+	if timeScale != 1:
+		$Button2.text = "X 1"
+		Engine.time_scale = 1
+		timeScale = 1
+	
 	$AudioStreamPlayer.play()
 	$EndPos/Particles2D.emitting = true
 	$Timer.start()
