@@ -5,7 +5,7 @@
 [ext_resource path="res://Scripts/Level.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Panel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Controller.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Assets/audio01.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/AUDIO001.wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 6 )
@@ -98,7 +98,6 @@ __meta__ = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
-autoplay = true
 [connection signal="body_entered" from="EndPos" to="." method="_on_EndPos_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -3,6 +3,7 @@ extends Node2D
 class_name Level
 
 onready var panel = $Panel
+
 export var maxPlot = 1
 export (PackedScene) var nextScene = null
 
@@ -30,6 +31,7 @@ func _on_EndPos_body_entered(body):
 
 
 func emit_part():
+	$AudioStreamPlayer.play()
 	$EndPos/Particles2D.emitting = true
 	$Timer.start()
 
